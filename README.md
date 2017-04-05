@@ -7,7 +7,7 @@ My personal [Atom](https://atom.io/) configuration, feel free to use it.
 
 Clone this repository:
 
-`$ git clone https://github.com/genoma/atom-configuration.git ~/.atom`
+`$ git clone https://github.com/gabriel-cardoso/atom-configuration.git ~/.atom`
 
 Use **package-sync** from the command palette to install the remaining packages.
 
