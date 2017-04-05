@@ -1,51 +1,59 @@
-# Your keymap
-#
-# Atom keymaps work similarly to style sheets. Just as style sheets use
-# selectors to apply styles to elements, Atom keymaps use selectors to associate
-# keystrokes with events in specific contexts. Unlike style sheets however,
-# each selector can only be declared once.
-#
-# You can create a new keybinding in this file by typing "key" and then hitting
-# tab.
-#
-# Here's an example taken from Atom's built-in keymap:
-#
-# 'atom-text-editor':
-#   'enter': 'editor:newline'
-#
-# 'atom-workspace':
-#   'ctrl-shift-p': 'core:move-up'
-#   'ctrl-p': 'core:move-down'
-#
-# You can find more information about keymaps in these guides:
-# * https://atom.io/docs/latest/using-atom-basic-customization#customizing-key-bindings
-# * https://atom.io/docs/latest/behind-atom-keymaps-in-depth
-#
-# If you're having trouble with your keybindings not working, try the
-# Keybinding Resolver: `Cmd+.` on OS X and `Ctrl+.` on other platforms. See the
-# Debugging Guide for more information:
-# * https://atom.io/docs/latest/hacking-atom-debugging#check-the-keybindings
-#
-# This file uses CoffeeScript Object Notation (CSON).
-# If you are unfamiliar with CSON, you can read more about it in the
-# Atom Flight Manual:
-# https://atom.io/docs/latest/using-atom-basic-customization#cson
+'.editor':
+  'ctrl-alt-g': 'find-and-replace:select-all'
+  'ctrl-shift-V': 'core:paste'
+  'ctrl-x ctrl-w': 'core:save-as'
 
-'atom-text-editor.vim-mode-plus.normal-mode':
-  'g c':    'vim-mode-plus:select-latest-change'
-  'cmd-enter': 'vim-mode-plus:maximize-pane'
-  'y s w': 'vim-mode-plus:surround-word'
-  'y m s':  'vim-mode-plus:map-surround'
-  'd s': 'vim-mode-plus:delete-surround-any-pair'
-  'c s': 'vim-mode-plus:change-surround-any-pair'
-  # EX MODE
-  ':': 'vim-mode-plus-ex-mode:open'
-  '!': 'vim-mode-plus-ex-mode:toggle-setting'
+'.fuzzy-finder':
+  'ctrl-x ctrl-f': 'advanced-open-file:toggle'
 
-# SURROUND
-'atom-text-editor.vim-mode-plus.visual-mode':
-  'shift-S': 'vim-mode-plus:surround'
+'atom-text-editor.autocomplete-active, .fuzzy-finder, .command-palette':
+  'ctrl-n': 'core:move-down'
+  'ctrl-p': 'core:move-up'
 
-# CLIPBOARD PLUS
-'atom-text-editor.vim-mode-plus:not(.insert-mode)':
-  'ctrl-p': 'clipboard-plus:toggle'
+'.find-and-replace':
+  'ctrl+n': 'core:cancel'
+
+#####################################################
+# Disable all ctrl-k * to allow ctrl-k to kill line #
+#####################################################
+'body.platform-darwin, body.platform-win32, body.platform-linux':
+  # disable default ctrl-k keybindings
+  'ctrl-k ctrl-b': 'unset!'
+
+'.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
+  # disable default ctrl-k keybindings
+  'ctrl-k ctrl-d': 'unset!'
+
+'body':
+  # disable default ctrl-k keybindings
+  "ctrl-k up": "unset!"
+  "ctrl-k down": "unset!"
+  "ctrl-k left": "unset!"
+  "ctrl-k right": "unset!"
+  "ctrl-k ctrl-w": "unset!"
+  "ctrl-k alt-ctrl-w": "unset!"
+  "ctrl-k ctrl-p": "unset!"
+  "ctrl-k ctrl-n": "unset!"
+  "ctrl-k ctrl-up": "unset!"
+  "ctrl-k ctrl-down": "unset!"
+  "ctrl-k ctrl-left": "unset!"
+  "ctrl-k ctrl-right": "unset!"
+  'ctrl+n': 'unset!'
+
+'atom-workspace atom-text-editor':
+  # disable default ctrl-k keybindings
+  "ctrl-k ctrl-u": "unset!"
+  "ctrl-k ctrl-l": "unset!"
+
+"atom-workspace atom-text-editor:not([mini])":
+  # disable default ctrl-k keybindings
+  "ctrl-k ctrl-0": "unset!"
+  "ctrl-k ctrl-1": "unset!"
+  "ctrl-k ctrl-2": "unset!"
+  "ctrl-k ctrl-3": "unset!"
+  "ctrl-k ctrl-4": "unset!"
+  "ctrl-k ctrl-5": "unset!"
+  "ctrl-k ctrl-6": "unset!"
+  "ctrl-k ctrl-7": "unset!"
+  "ctrl-k ctrl-8": "unset!"
+  "ctrl-k ctrl-9": "unset!"

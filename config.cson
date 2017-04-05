@@ -1,95 +1,49 @@
 "*":
-  "aligner-scss": {}
-  "atom-beautify":
-    _analyticsUserId: "c7844b0f-4310-4637-bd1e-dfe8785825e5"
-  "atom-material-ui":
-    colors:
-      abaseColor:
-        alpha: 1
-        blue: 121
-        green: 121
-        red: 121
-      accentColor:
-        alpha: 1
-        blue: 110
-        green: 110
-        red: 158
-      genAccent: true
-    fonts: {}
-    tabs:
-      compactTabs: true
-    treeView: {}
-    ui:
-      panelContrast: true
-      panelShadows: true
-  "atom-typescript": {}
-  "autocomplete-plus": {}
-  build: {}
-  "clip-history": {}
-  "clipboard-plus": {}
+  "advanced-open-file": {}
+  "atom-pair":
+    pusher_app_key: "465303074b36243560c1"
+    pusher_app_secret: "d774a7b4ac11451b30f8"
+    slack_url: "https://hooks.slack.com/services/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"
+  "atomic-emacs":
+    killWholeLine: true
+  "autohide-tree-view":
+    pushEditor: true
   core:
-    audioBeep: false
-    themes: [
-      "one-dark-ui"
-      "hybrid-next-syntax"
+    disabledPackages: [
+      "emacs-mode"
+      "zentabs"
     ]
-  "cursor-history": {}
+    telemetryConsent: "limited"
+  "disable-keybindings":
+    allCommunityPackages: true
+    bundledPackages: [
+      "go-to-line"
+      "bracket-matcher"
+    ]
+    exceptCommunityPackages: [
+      "emacs-plus"
+    ]
+    prefixKeys: [
+      "ctrl+k"
+    ]
   editor:
     fontFamily: "Fira Code"
-    invisibles: {}
-    scrollPastEnd: true
+    fontSize: 17
     showIndentGuide: true
     showInvisibles: true
-    tabType: "soft"
+    softWrap: true
   "exception-reporting":
-    userId: "018125f2-7a66-8644-6ae4-6ae87d186db9"
-  "imdone-atom":
-    openIn: {}
-    todaysJournal: {}
-  "language-babel": {}
-  linter:
-    displayLinterInfo: false
-    errorPanelHeight: 24
-    lintOnFlyInterval: 1000
-  "linter-eslint": {}
-  "linter-jshint": {}
-  "merge-conflicts": {}
-  minimap: {}
+    userId: "e3a27c53-fc3c-d51e-9ee1-4a01f64c97bf"
+  "file-icons":
+    onChanges: true
+  "hide-tree":
+    focus: false
+  metrics:
+    userId: "95fa3c69c54a1b40dec04a2c25bb0f7c5f5e71b5"
   "one-dark-ui": {}
-  "one-light-ui": {}
   "package-sync":
-    forceOverwrite: true
-  pigments: {}
-  "project-plus": {}
-  "terminal-plus":
-    core:
-      shell: "/usr/local/bin/zsh"
-    style:
-      defaultPanelHeight: "100px"
-      fontSize: "16"
-      theme: "dracula"
-    toggles:
-      autoClose: true
-      cursorBlink: false
-  "vim-mode":
-    useClipboardAsDefaultRegister: true
-  "vim-mode-clipboard-plus":
-    useVimModePlus: true
-  "vim-mode-plus":
-    flashOnUndoRedo: true
-    flashOnUndoRedoDuration: 150
-    incrementalSearch: true
-    setCursorToStartOfChangeOnUndoRedo: true
-    showHoverOnOperate: true
-    showHoverSearchCounter: true
-    stayOnTransformString: true
-    stayOnYank: true
-    useClipboardAsDefaultRegister: true
-    useSmartcaseForSearch: true
+    createOnChange: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
-  whitespace:
-    ignoreWhitespaceOnCurrentLine: false
-".pug.source":
-  whitespace:
-    removeTrailingWhitespace: false

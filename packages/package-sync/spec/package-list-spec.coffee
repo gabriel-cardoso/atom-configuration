@@ -30,6 +30,9 @@ describe 'PackageList', ->
       expect(list.getPackages()).toEqual(['foo', 'bar', 'baz'])
 
   describe 'setPackages', ->
+    beforeEach ->
+      spyOn(atom.packages, 'getAvailablePackageNames').andReturn(['foo', 'bar', 'baz'])
+
     describe 'when forceOverwrite is set to false', ->
       beforeEach ->
         atom.config.set('package-sync.forceOverwrite', false)

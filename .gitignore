@@ -6,11 +6,9 @@ storage
 .node-gyp
 .npm
 .apm
+nohup.out
 
 # We add packages to the .gitignore
 packages/**
 # But not package-sync
 !packages/package-sync
-
-# PRIVACY
-.apmrc
